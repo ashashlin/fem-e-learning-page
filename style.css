@@ -1,0 +1,410 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* ========================= */
+
+:root {
+  --blue-600: #666CA3;
+  --blue-600-light: rgba(102, 108, 163, .25);
+  --blue-900: #13183F;
+  --pink-300: #FFA7C3;
+  --pink-600: #F74780;
+  --grey: #83869A;
+  --white: #FFFFFF;
+  --gradient-pink: linear-gradient(#F02AA6, #FF6F48);
+  --gradient-purple: linear-gradient(#4851FF, #F02AA6);
+  --gradient-blue-600: linear-gradient(var(--white), var(--blue-600-light));
+
+  --br: .9375rem;
+
+  --ff-1: 'Plus Jakarta Sans', sans-serif;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  --fs-1: 1rem;
+  --fs-2: 1.125rem;
+  --fs-3: 1.5rem;
+  --fs-4: 2rem;
+  --fs-5: 2.5rem;
+  --fs-6: 3.5rem;
+
+  --lh-1: 1;
+  --lh-2: 1.2;
+  --lh-3: 1.5;
+
+  --spacer-100: .5rem;
+  --spacer-150: .75rem;
+  --spacer-200: 1rem;
+  --spacer-250: 1.25rem;
+  --spacer-300: 1.5rem;
+  --spacer-400: 2rem;
+  --spacer-500: 2.5rem;
+  --spacer-550: 2.75rem;
+  --spacer-600: 3rem;
+  --spacer-700: 3.5rem;
+  --spacer-800: 4rem;
+  --spacer-1000: 5rem;
+  --spacer-1600: 8rem;
+  --spacer-1800: 9rem;
+}
+
+body {
+  color: var(--grey);
+  font-family: var(--ff-1);
+  font-weight: 500;
+  font-size: var(--fs-1);
+  line-height: var(--lh-3);
+}
+
+header {
+  padding: var(--spacer-200) var(--spacer-250);
+  transition: background-color 150ms;
+}
+
+@media (min-width: 48rem) {
+  header,
+  .footer {
+    padding: var(--spacer-300) var(--spacer-550);
+  }
+}
+
+@media (min-width: 90rem) {
+  header,
+  .footer {
+    padding: var(--spacer-300) var(--spacer-1000);
+  }
+}
+
+header .container,
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 90rem) {
+  .container {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+}
+
+header .logo-icon,
+footer .logo-icon {
+  width: 4.95rem;
+}
+
+header .btn {
+  transform: translateX(0.000000001px);
+  z-index: 10;
+}
+
+header .btn:hover {
+  background-color: var(--blue-600);
+}
+
+@media (min-width: 90rem) {
+  header .logo-icon,
+  footer .logo-icon {
+    width: 6.9375rem;
+}
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--pink-600);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-700);
+}
+
+.btn {
+  background-color: var(--blue-900);
+  color: var(--white);
+  padding: var(--spacer-200) var(--spacer-400);
+  border-radius: 3.125rem;
+}
+
+@media (min-width: 48rem) and (max-width: 89.99rem) {
+  .btn {
+    padding: var(--spacer-150) var(--spacer-300);
+  }
+}
+
+.hero {
+  padding: var(--spacer-800) var(--spacer-250) 0;
+  overflow-x: clip;
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    padding: var(--spacer-800) var(--spacer-550);
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero {
+    padding: var(--spacer-800) var(--spacer-1000);
+  }
+}
+
+.hero-text {
+  margin-bottom: var(--spacer-600);
+}
+
+@media (min-width: 48rem) {
+  .hero .container {
+    display: flex;
+    gap: var(--spacer-300);
+  }
+
+  .hero-text {
+    flex-basis: 50%;
+    padding-top: var(--spacer-600);
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero-text {
+    padding-top: var(--spacer-1600);
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero-text {
+    margin-bottom: 0;
+    padding-bottom: var(--spacer-1600);
+  }
+}
+
+.hero h1 {
+  color: var(--blue-900);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-800);
+  line-height: var(--lh-2);
+  margin-bottom: var(--spacer-300);
+}
+
+@media (min-width: 90rem) {
+  .hero h1 {
+    font-size: var(--fs-6);
+  }
+}
+
+.hero p {
+  font-size: var(--fs-2);
+  margin-bottom: var(--spacer-500);
+}
+
+@media (min-width: 90rem) {
+  .hero p {
+    font-size: 1.4rem;
+  }
+}
+
+.hero .btn {
+  background-image: var(--gradient-pink);
+  color: white;
+  transition: opacity 150ms;
+}
+
+.hero .btn:hover {
+  opacity: .6;
+}
+
+picture {
+  margin-left: -20px;
+  /* why doesn't this work? */
+  margin-right: -20px;
+}
+
+.hero-img {
+  max-width: max-content;
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    position: relative;
+  }
+
+  .hero-img {
+    position: absolute;
+    max-width: min(90%, 750px);
+    top: -10.5rem;
+    right: -18rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero .container {
+    position: relative;
+  }
+
+  .hero-img {
+    max-width: 95%;
+    top: -19rem;
+    right: -32rem;
+  }
+}
+
+.courses {
+  font-weight: var(--fw-700);
+  background-image: var(--gradient-blue-600);
+  padding: var(--spacer-800) var(--spacer-250) var(--spacer-1000);
+}
+
+.courses .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-800);
+}
+
+@media (min-width: 48rem) {
+  .courses {
+    padding: var(--spacer-800) var(--spacer-550) var(--spacer-1800);
+  }
+
+  .courses .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacer-800) var(--spacer-300);
+  }
+}
+
+@media (min-width: 90rem) {
+  .courses .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.courses h2 {
+  background-image: var(--gradient-pink);
+  color: var(--white);
+  line-height: var(--lh-2);
+  padding: var(--spacer-400);
+  border-radius: var(--br);
+}
+
+@media (min-width: 48rem) {
+  .courses h2 {
+    padding: var(--spacer-800) var(--spacer-400) var(--spacer-500);
+  }
+}
+
+@media (min-width: 90rem) {
+  .courses h2 {
+    font-size: var(--fs-4);
+  }
+}
+
+.course {
+  position: relative;
+  background-color: var(--white);
+  padding: var(--spacer-800) var(--spacer-400) var(--spacer-500);
+  box-shadow: 1px 8px 10px rgba(0, 0, 0, .05);
+  border-radius: var(--br);
+}
+
+@media (min-width: 48rem) {
+  .course {
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    gap: var(--spacer-300);
+  }
+}
+
+.course img {
+  position: absolute;
+  top: -1.7rem;
+}
+
+.course h3,
+.course p {
+  margin-bottom: var(--spacer-300);
+}
+
+.course a {
+  transition: opacity 150ms;
+}
+
+.course a:hover {
+  opacity: .6;
+}
+
+@media (min-width: 48rem) {
+  .course p {
+    font-size: var(--fs-2);
+    font-weight: var(--fw-500);
+    margin-bottom: 0;
+  }
+}
+
+.course h3 {
+  color: var(--blue-900);
+}
+
+@media (min-width: 48rem) {
+  .course h3 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .course a {
+    align-self: end;
+  }
+}
+
+@media (min-width: 90rem) {
+  .course h3 {
+    font-size: 1.6875rem;
+  }
+}
+
+footer {
+  background-color: var(--blue-900);
+  padding: var(--spacer-300) var(--spacer-250);
+}
+
+footer .btn {
+  background-image: var(--gradient-purple);
+  padding: var(--spacer-150) var(--spacer-300);
+  transition: opacity 150ms;
+}
+
+footer .btn:hover {
+  opacity: .6;
+}
+
+@media (min-width: 90rem) {
+  footer .btn {
+    padding: var(--spacer-200) var(--spacer-400);
+  }
+}
